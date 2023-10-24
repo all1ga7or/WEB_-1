@@ -1,0 +1,77 @@
+@import "header.css";
+@import "main.css";
+@import "aside.css";
+@import "footer.css";
+@font-face {
+    font-family: 'RubikWet'; 
+    src: url('font/FirstReignPERSONALUSEONLY-Regular.otf') format('woff2')
+}
+body {
+    color: rgb(255, 255, 255);
+
+    background-image: url('img/hogwarts.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+   
+}
+.body_container{
+    max-width: 1400px;
+    gap: 10px;
+    font-size: 20px;
+    margin: 0 auto;
+    font-family: RubikWet;
+    display: grid;
+    grid-template-rows: 1fr auto 2fr; /* header, меню, вміст, футер */
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+@media (max-width: 1080px) {
+    .body_container {
+        max-width: 700;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:"menu" "aside" "article";
+    }
+    .menu_container ul{
+        justify-content:space-evenly;
+    }
+    .menu_container ul li {
+        padding: 30px;
+    }  
+}
+@media (max-width: 900px){
+    .body_container {
+        max-width: 500;
+    }
+    article .section_container{
+        grid-template-columns: 1fr;
+    }
+    ul.desktop_menu li{
+       display: none; 
+    }
+    .menu_container ul.mobile_menu {
+        display: flex;
+        justify-items: center;
+    }
+    ul.mobile_menu li:hover > ul{
+        display: initial;
+    }   
+}
+@media (max-width: 600px){
+    header{
+        grid-template-columns: 1fr;
+    }
+    header h1{
+        margin-left: 20px;
+    }
+    footer{
+        grid-template-columns: 1fr;
+    }
+}

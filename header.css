@@ -1,0 +1,30 @@
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    background-color: #0e475599;
+    border-radius: 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.search input {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+}
+
+.search button {
+    background-color: #061b32;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
